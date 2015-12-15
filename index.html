@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="dm8">
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body ng-controller="mainCtrl">
+  {{ saySomethingPicard }}
+
+  <input ng-model="picardsWords">
+  </input>
+
+  <p>
+    Picard Says : {{picardsWords}}
+  </p>
+
+  <hr />
+  <h4>Ng-Repeat</h4>
+
+  Name Filter: <input ng-model="crewFilter.name"></input>
+  Rank Filter: <input ng-model="crewFilter.rank"></input>
+
+  <div ng-repeat="member in crew | filter: crewFilter" class="crew-member">
+    {{member.name}} >>> {{member.rank}}
+</div>
+
+<hr/>
+<h4>Ng-show, ng-hide, hg-if, ng-click</h4>
+
+<div ng-show="isAwesome">You are awesome!</div>
+
+<p ng-hide="isAwesome">We are very sorry that you are not awesome!</p>
+
+<p ng-if="isAwesome">If you kinda wanna</p>
+
+<button ng-click="btnClicked()">Click Me</button>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script scr="app.js"></script>
+
+</body>
+</html>
