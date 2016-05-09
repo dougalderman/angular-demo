@@ -18,7 +18,7 @@ foreman.controller('mainCtrl', function($scope, $timeout) {
 
   $scope.isAwesome = true;
 
-  $scope.btnClicked = function(){
-                           $scope.isAwesome=!$scope.isAwesome;
- };
+  $scope.btnClicked = function() {
+     $scope.isAwesome = !$scope.isAwesome;
+  };
 });
